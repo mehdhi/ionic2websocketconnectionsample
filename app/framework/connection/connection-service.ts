@@ -1,20 +1,19 @@
-import {Injectable, Component, Inject} from 'angular2/core';
+import {Injectable, Component, Inject, provide} from 'angular2/core';
 import {$WebSocket} from 'angular2-websocket/angular2-websocket';
 import {bootstrap} from 'angular2/platform/browser';
+import {Http} from 'angular2/http';
   
+@Component({
+  providers: [ provide( $WebSocket, { useValue: new $WebSocket("ws://echo.websocket.org") } ) ]
+})
 @Injectable()
 export class ConnectionService {
 
     private _status: number;
 
-    //private connection: $WebSocket;
+    constructor( private connection : $WebSocket ) {
 
-    constructor( private connection : $WebSocket = new $WebSocket("ws://echo.websocket.org") ) {
-
-        console.log("Starting connection");
-
-       //this.connection = new $WebSocket("ws://echo.websocket.org");
-        
+        console.log("Starting connection");      
         this.connection.onClose(this.onCloseHandler);
         this.connection.onError(this.onErrorHandler);
         this.connection.onOpen(this.onOpenHandler);
@@ -22,9 +21,12 @@ export class ConnectionService {
 
     }
 
+    getData(){
+        return "Hello";
+    }
     send() {
         var msg = {
-            author: "author",
+            author: "tymspy",
             message: "hi"
         }
 
@@ -73,4 +75,3 @@ export class ConnectionService {
     }
 
 }
-bootstrap(ConnectionService, [$WebSocket]);
