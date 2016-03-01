@@ -31,7 +31,7 @@ export class ConnectionService {
         }
 
         this.sendMessage(JSON.stringify(msg));
-        console.log("send button fired");
+        console.log("message sent");
     }
 
     public connect() {
