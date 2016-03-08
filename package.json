@@ -10,11 +10,23 @@
     "zone.js": "0.5.14"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "0.15.10",
-    "strip-sourcemap-loader": "0.0.1",
-    "typescript": "1.7.5",
+    "typescript": "^1.7.5",
+    "awesome-typescript-loader": "^0.15.10",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "istanbul-instrumenter-loader": "^0.2.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "phantomjs-polyfill": "^0.0.1",
+    "strip-sourcemap-loader": "^0.0.1",
     "angular2-websocket": "*"
   },
   "name": "serviceinjectionsample",
-  "description": "serviceInjectionSample: An Ionic project"
+  "description": "serviceInjectionSample: An Ionic project",
+  "version": "0.0.0",
+  "private": true
 }
