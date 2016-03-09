@@ -3,10 +3,12 @@
 This is a sample project for websocket communication and service in service injection
 with tests using jasmine
 
+install nodejs
+install ionic2
+
 
 install 
 
-├── ionic@2.0.0-beta.17
 ├── jasmine-core@2.4.1
 ├── karma@0.13.21
 ├── karma-coverage@0.5.3
@@ -21,6 +23,8 @@ install
 ├── webpack@1.12.12
 
 as global
+
+
 
 run npm install
 
